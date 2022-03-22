@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>464 Project Proposal</title>
+		<title>Surface Temp Calculator</title>
 		<link rel="icon" href="imgs/logo.ico">
 		
 		<!-- link to custom styles -->
@@ -33,16 +33,35 @@
 				</div>
 				<div id='splash-item5'>
 					<p>
-						Instructions:<br><br>
-						Choose this path if you are excited by tool building and the prospect of sharing ready-made functionality with your future self and others, if you enjoy programming, if you abhor redundancy and love making things efficient, modular and useful, if you understand (or plan on understanding) functions well and if you can write articulate and efficient technical documentation and instructions that are accessible to a wide audience.<br>
-						<li>Right-click anywhere and click on <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Open_the_Inspector" target="_blank">Inspect</a> (it may involve a different step for different web browsers). This is an extremely helpful feature of your web browser!</li>
-						<li>This is a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul" target="_blank">list item</a></li>
-						<li>HTML elements are typically stored in <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div" target="_blank">divs</a></li>
-						<li>Experiment with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">font-size units</a> px, %, em, calc, etc.</li>
-						<li>It is worth reading up on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">CSS grid layout</a> since the current page is structured that way. This is relatively new to CSS and allows you to easily structure webpages without external libraries such as <a href="https://getbootstrap.com/docs/3.4/css/" target="_blank">Bootstrap</a>, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Flexbox</a>, etc. CSS grid layout may appear complicated to many, so take your time with it.</li>
-						<li>I will add more tips and links during the lab based on questions..</li>
-						<li>Final note: you don't need to become a pro at this, but be aware that knowing the ins and outs of HTML and CSS is fundamental to basic web design. You can, however, get away with not knowing much if, for example, you are more focused on embedded webmaps, which we will get to next week and which are styled differently. Still, the bones that hold everything together are what you see right in front of you!</li>
-						
+						For this project I would like to streamline a current multi-step process that I had to go through in Advanced GIS last semester. 
+						This process involves taking satellite imagery and using an amount of the spectral bands to calculate the estimated surface temperature of the given image. 
+						While the USGS provides temperature data for imagery taken within the United States, the rest of the world is left without this processing already done. 
+						Following <a href="https://www.gis-blog.com/calculation-of-land-surface-temperature-lst-from-landsat-8-using-r/" target="_blank">a guide</a> 
+						like I did in my final project in Advanced GIS last semester, I will create a python tool (and possibly a QGIS plugin, time permitting) 
+						that will automatically take a Landsat (OR Sentinel, again time permitting) imagery dataset and automatically convert it to a surface temperature image and 
+						output the image. The guide(s) I will be following (and have followed in the past) reference the 
+						<a href="https://www.usgs.gov/landsat-missions/using-usgs-landsat-level-1-data-product" target="_blank">USGS process</a>  
+						to get the desired information from the data. 
+						<br>
+						The process will include the following steps:<br>
+					</p>
+					<ul>
+						<li>Data downloading using NASA’s Earth Data <a href="https://github.com/asfadmin/Discovery-asf_search/tree/master/examples" target="_blank">ASF Python Search Module </a>made public during a presentaion which I attended </li>
+						<li>Parsing and creating geodataframes for each required Band image</li>
+						<li>Clipping to a desired user location by input of another data file</li>
+						<li>Parsing and utilizing metadata values for calculations</li>
+						<li>Value conversion</li>
+						<li>Raster conversion</li>
+						<li>Raster export and map visualization</li>
+						<p>Additional Potential Steps/Functions</p>
+						<li>Vector polygon conversion of final maps</li>
+						<li>Sentinel data download/conversion</li>
+						<li>Other satellite data download/conversion</li>
+					</ul>
+					<p>
+						The goal of this project is to provide an easy to use tool to both download and analyze Landsat imagery using the on-board thermal imaging sensors to derive 
+						land surface temperature for the end user, saving them many steps of calculations and searching through metadata. If possible the creation of a QGIS plugin with 
+						this finished product will make it even more accessible and user friendly.
 					</p>
 					
 				</div>
